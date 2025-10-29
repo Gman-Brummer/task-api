@@ -1,6 +1,6 @@
 type: object
 properties:
-  error: 
+  id: 
     type: string 
     example: Task not found
   details:

@@ -2,4 +2,4 @@ description: Invalid input
 content:
   application/json:
     schema:
-      $ref: ../schemas/NotNumber.yaml
+      $ref: ../schemas/NotFoundError.yaml
