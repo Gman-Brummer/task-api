@@ -26,6 +26,37 @@ get:
             type: array
             items:
               $ref: ../components/schemas/Task.yaml
+getById:
+  summary: Get post by id
+  tags:
+  - Tasks
+  parameters:
+    name: id 
+    in: url 
+    required: true 
+    description: Search for task by Id number
+    schema:
+      type: integer 
+      example: 1
+  responses:
+    '200': 
+      description: Task found successfully 
+      content: 
+        application/json: 
+          schema:
+            $ref: ../components/schemas/Task.yaml
+    '400':
+      $ref: ../components/responses/BadRequest.yaml
+    '404':
+      description: Task Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/responses/InvalidInput.yaml
+
+
+
+
 post:
   summary: Create a new task
   tags:
@@ -45,3 +76,5 @@ post:
             $ref: ../components/schemas/Task.yaml
     '400':
       $ref: ../components/responses/BadRequest.yaml
+
+
