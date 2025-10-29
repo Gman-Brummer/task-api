@@ -14,5 +14,5 @@ tags:
 paths:
   /tasks:
     $ref: paths/tasks.yaml
-  /tasks/id:
+  /tasks/{id}:
     $ref: paths/taskbyid.yaml
